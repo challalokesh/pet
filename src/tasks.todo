@@ -1,0 +1,38 @@
+✔ breed issue @done (5/30/2017, 3:18:00 PM)
+✔ date added @done (5/30/2017, 5:13:49 PM)
+✔ new pet @done (5/30/2017, 3:18:03 PM)
+✔ update pet @done (5/30/2017, 3:18:04 PM)
+✔ delete pet @done (5/30/2017, 3:18:04 PM)
+✔ toast service @done (5/30/2017, 5:10:07 PM)
+
+✔ search pet @done (5/30/2017, 11:47:50 PM)
+✔ navigate to list after save @done (5/31/2017, 1:40:20 PM)
+✔ pagination @done (5/30/2017, 11:47:54 PM)
+
+✔ Menu @done (6/7/2017, 6:48:12 AM)
+✔ spinner display @done (6/7/2017, 2:30:20 PM)
+✔ ApiInfo @done (6/7/2017, 2:30:31 PM)
+✔ search click issue @done (6/7/2017, 5:36:39 PM)
+
+need to work:
+    ✔ no pets found alert @done (6/14/2017, 12:21:01 PM)
+    ☐ background image
+    ☐ improve UI
+    ✔ delete confirmation @done (6/14/2017, 12:09:29 PM)
+    ✔ error, warnings toasts auto disable @done (6/14/2017, 12:21:10 PM)
+    ☐ deep linking
+    ☐ test cross platform
+    ☐ pets validation, required fields
+    ☐ spinner display when ajax calls
+    ☐ login, logout proper way
+    ☐ edit pet, add pet texts through mode
+    ☐ add pet with out giving values giving error
+    ☐ MR Comments
+    ☐ application documentation
+
+
+
+
+
+
+

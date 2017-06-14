@@ -1,0 +1,83 @@
+<pagehead [title]="pageTitle"></pagehead>
+
+<ion-content text-center padding class="page-top">
+  <p>Already registered? Click <a (click)="login()"> Sign In </a> to access your account.</p>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>First Name*</ion-label>
+        <ion-input type="text" formControlName="firstName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Middle Initial</ion-label>
+        <ion-input type="text" formControlName="middleInitial"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>Last Name*</ion-label>
+        <ion-input type="text" formControlName="lastName"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>User Name*</ion-label>
+        <ion-input type="email" formControlName="userName"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>Password*</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Phone Mobile</ion-label>
+        <ion-input type="number" formControlName="phoneNumberCell"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>Address</ion-label>
+        <ion-textarea formControlName="address"></ion-textarea>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>City</ion-label>
+        <ion-textarea formControlName="city"></ion-textarea>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>State</ion-label>
+        <ion-select formControlName="state">
+          <ion-option *ngFor="let option of states" [value]="option">{{ option }}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Postal Code</ion-label>
+        <ion-input type="number" formControlName="postalCode"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Country</ion-label>
+        <ion-select formControlName="country">
+          <ion-option *ngFor="let option of countries" [value]="option">{{ option }}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Terms and conditions of in4me</ion-label>
+        <ion-checkbox checked="true"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <button type="submit" ion-button block [disabled]="!registrationForm.valid">Register</button>
+    <button type="button" block ion-button class="hide1"></button>
+  </form>
+
+
+</ion-content>

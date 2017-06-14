@@ -1,0 +1,44 @@
+<pagehead [title]="pageTitle"></pagehead>
+<pagehead [title]="pageTitle"></pagehead>
+
+<ion-content padding class="page-top">
+  <ion-item>
+    <ion-label fixed>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="this.petObj.name"></ion-input>
+  </ion-item>
+
+  <br />
+  <ion-item>
+    <ion-label fixed>Breed</ion-label>
+    <ion-select [(ngModel)]="this.petObj.breed.id">
+      <ion-option *ngFor="let breed of breeds" [value]="breed.id">{{breed.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <br />
+  <ion-item>
+    <ion-label fixed>Color</ion-label>
+    <ion-input type="text" [(ngModel)]="this.petObj.color"></ion-input>
+  </ion-item>
+  <br />
+  <ion-item>
+    <ion-label fixed>Gender</ion-label>
+    <ion-select [(ngModel)]="this.petObj.gender">
+      <ion-option value="FEMALE">Female</ion-option>
+      <ion-option value="MALE">Male</ion-option>
+    </ion-select>
+  </ion-item>
+  <br />
+
+  <ion-item>
+    <ion-label fixed>Date</ion-label>
+    <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="this.petObj.birthDate"></ion-datetime>
+  </ion-item>
+  <br />
+
+  <div text-right>
+    <button *ngIf="this.petObj.id>0" ion-button (click)="deletePet()">Delete</button>
+    <button ion-button (click)="savePet()">Save</button>
+  </div>
+
+
+</ion-content>

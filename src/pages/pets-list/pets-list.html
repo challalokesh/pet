@@ -1,0 +1,68 @@
+<pagehead [title]="pageTitle"></pagehead>
+
+<ion-content padding class="page-top">
+  <!--<ion-searchbar
+  [(ngModel)]="searchName"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>-->
+  <ion-row>
+    <ion-col>
+      <ion-item class="name-input">
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="searchName"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col> <ion-item>
+    <ion-label>Start Date</ion-label>
+    <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="searchStart"></ion-datetime>
+  </ion-item></ion-col>
+
+<ion-col> <ion-item>
+    <ion-label>End Date</ion-label>
+    <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="searchEnd"></ion-datetime>
+  </ion-item></ion-col>
+
+    <ion-col>
+      <ion-fab>
+        <button ion-fab (click)="searchPets()">
+     <ion-icon name="search"></ion-icon>
+  </button>
+      </ion-fab>
+    </ion-col>
+
+  </ion-row>
+<ion-item-divider>
+</ion-item-divider>
+  <ion-list>
+    <ion-item *ngFor="let item of pets">
+      <ion-row>
+        <ion-col>
+          <div><a class="link" (click)="edit(item.id)">{{ item.name }}</a> </div>
+          <p> {{ item.gender }}</p>
+        </ion-col>
+        <ion-col>
+          <div> {{ item.breed?.name }} </div>
+          <p> {{ item.color }}</p>
+        </ion-col>
+        <ion-col>
+          {{ item.birthDate | date:shortDate }}
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+
+
+<ion-infinite-scroll *ngIf="this.searchPet" (ionInfinite)="doInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+  <ion-fab bottom left>
+    <button ion-fab (click)="add()">
+     <ion-icon name="add"></ion-icon>
+  </button>
+  </ion-fab>
+
+</ion-content>
